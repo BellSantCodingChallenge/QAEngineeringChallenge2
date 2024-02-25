@@ -6,7 +6,7 @@ const machineDataTyped = machineData as Record<
   Record<string, any>
 >;
 
-function linearScale(
+export function linearScale(
   value: number,
   outputMin: number,
   outputMax: number,
