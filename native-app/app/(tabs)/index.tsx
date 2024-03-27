@@ -110,6 +110,7 @@ export default function StateScreen() {
       <View style={styles.resetButton}>
         <Button
           title='Reset Machine Data'
+          testID='click-reset'
           onPress={async () => await resetMachineData()}
           color='#FF0000'
         />

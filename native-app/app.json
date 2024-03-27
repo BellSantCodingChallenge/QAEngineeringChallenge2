@@ -3,7 +3,10 @@
     "name": "app",
     "slug": "app",
     "version": "1.0.0",
-    "platforms": ["ios", "android"],
+    "platforms": [
+      "ios",
+      "android"
+    ],
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
@@ -28,10 +31,23 @@
       "package": "com.machinehealth.app"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "@config-plugins/detox"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "6fb94263-8b1c-46b1-9af9-8cf5c6ebbac5"
+      }
+    },
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/6fb94263-8b1c-46b1-9af9-8cf5c6ebbac5"
     }
   }
 }
