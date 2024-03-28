@@ -106,11 +106,11 @@ export default function StateScreen() {
         lightColor='#eee'
         darkColor='rgba(255,255,255,0.1)'
       />
-      <Button title='Calculate Health' onPress={calculateHealth} />
+      <Button title='Calculate Health' onPress={calculateHealth} testID='calculate-health'/>
       <View style={styles.resetButton}>
         <Button
+          testID='reset-machine-data'
           title='Reset Machine Data'
-          testID='click-reset'
           onPress={async () => await resetMachineData()}
           color='#FF0000'
         />

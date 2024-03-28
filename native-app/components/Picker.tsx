@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
-
 function PickerIos({value, onSetValue, items}) {
   return (
     <RNPickerSelect

@@ -20,7 +20,7 @@ module.exports = {
     'ios.release': {
       type: 'ios.app',
       build:
-          'xcodebuild -workspace ios/eastestsexample.xcworkspace -scheme myapp -configuration Release -sdk iphonesimulator -arch x86_64 -derivedDataPath ios/build',
+          'xcodebuild -workspace ios/app.xcworkspace -scheme app -configuration Release -sdk iphonesimulator -arch x86_64 -derivedDataPath ios/build',
       binaryPath: 'ios/build/Build/Products/Release-iphonesimulator/app.app',
     }
   },
@@ -28,7 +28,7 @@ module.exports = {
     simulator: {
       type: 'ios.simulator',
       device: {
-        type: 'iPhone 14',
+        type: 'iPhone 15 Pro Max',
       },
     },
     emulator: {

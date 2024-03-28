@@ -27,6 +27,7 @@ export default function TabLayout() {
         name='index'
         options={{
           title: 'Machine State',
+          tabBarTestID: 'machine-state',
           tabBarIcon: ({color}) => <TabBarIcon name='list-ul' color={color} />,
         }}
       />
@@ -34,6 +35,7 @@ export default function TabLayout() {
         name='two'
         options={{
           title: 'Log Part',
+          tabBarTestID: 'log-part',
           tabBarIcon: ({color}) => <TabBarIcon name='edit' color={color} />,
         }}
       />

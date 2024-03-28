@@ -36,6 +36,7 @@ export default function EditScreenInfo({path}: {path: string}) {
       value: 'shieldingPressure',
       label: 'Shielding Pressure',
     },
+    {value: 'errorRate', label: 'Error Rate'},
     {value: 'vibrationLevel', label: 'Vibration Level'},
     {value: 'wireFeedRate', label: 'Wire Feed Rate'},
     {
@@ -113,24 +114,30 @@ export default function EditScreenInfo({path}: {path: string}) {
   return (
     <View>
       <Text style={styles.label}>Machine Name</Text>
+      <View testID='machine-name'>
       <Picker
         value={machineName}
         onSetValue={setMachineName}
         items={machineNames}
       />
+      </View>
+      
 
       <Text style={styles.label}>Part Name</Text>
-      <Picker value={partName} onSetValue={setPartName} items={partNames} />
-
+      <View testID='part-name'>
+      <Picker value={partName} onSetValue={setPartName} items={partNames}
+      />
+      </View>
       <Text style={styles.label}>Part Value</Text>
       <TextInput
         style={styles.input}
         value={partValue}
         onChangeText={(text) => setPartValue(text)}
         placeholder='Enter part value'
+        testID='part-value'
       />
 
-      <Button title='Save' onPress={savePart} />
+      <Button title='Save' onPress={savePart}  testID='save-btn'/>
 
       {isSaved && <Text style={styles.healthScore}>Saved ✔️</Text>}
     </View>
